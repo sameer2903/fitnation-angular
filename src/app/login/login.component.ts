@@ -9,22 +9,19 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  email: string = '';
-  password: string = '';
+  user1= {
+    email: '',
+  password: '',
+  };
 
-  constructor(private router: Router, private authService: AuthService) {}
+  constructor(private authService: AuthService) {}
 
   onLogin() {
-    this.authService.authenticate(this.email, this.password).subscribe(user => {
-      if (user) {
-        alert('Login Successful!');
-        this.router.navigate(['/dashboard']); // Navigate to dashboard
-      } else {
-        alert('Login Failed. Please try again.');
-      }
+    console.log('User data:', this.user1)
+    this.authService.login(this.user1).subscribe(response => {
+      console.log('User logged in successfully!', response);
     }, error => {
-      alert('An error occurred. Please try again later.');
-      console.error(error);
+      console.error('error logging in user', error);
     });
   }
 }

@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http'; // Import HttpClientMod
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component'; // Adjust the path if necessary
-
+import { SignUpComponent } from './signup/signup.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    SignUpComponent
+    
   ],
   imports: [
     BrowserModule,

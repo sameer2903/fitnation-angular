@@ -1,9 +1,21 @@
 {
-  "users": 
-  [
+  "users": [
     {
       "email": "myfitness@gmail.com",
-      "password": "password"
+      "password": "password",
+      "id": "c59f"
+    },
+    {
+      "id": "ce0d",
+      "email": "myfitness@gmail.com",
+      "password": "122334"
+    },
+    {
+      "id": "ab93",
+      "name": "ratnesh",
+      "email": "ratnesh",
+      "password": "123456",
+      "confirmPassword": "123456"
     }
   ]
 }

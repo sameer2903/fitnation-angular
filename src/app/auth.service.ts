@@ -11,11 +11,18 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
    // Method to authenticate user
-   authenticate(email: string, password: string): Observable<any> {
-    return this.http.get<any[]>(this.usersUrl).pipe(
-      // Filter users based on email and password
-      map(users => users.find(user => user.email === email && user.password === password))
-    );
+   signup(user:any): Observable<any>{
+    return this.http.post(this.usersUrl, user);
+   }
+   login(user1:any): Observable<any>{
+    return this.http.post(this.usersUrl, user1);
+   }
+
+  //  authenticate(email: string, password: string): Observable<any> {
+  //   return this.http.get<any[]>(this.usersUrl).pipe(
+  //     // Filter users based on email and password
+  //     map(users => users.find(user => user.email === email && user.password === password))
+  //   );
   }
-}
+
 
