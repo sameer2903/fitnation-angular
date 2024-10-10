@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&display=swap'); 
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    padding-top: 45%;
+    z-index: 5;
+}
+.content h1 {
+    font-size: 3em;
+    margin: 0;
+}
+.content p {
+    font-size: 1.5em;
+    margin: 0;
+}
+.section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #001f3f;
+    margin-top: 100vh; 
+}
+.section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px; 
+    height: 200px; 
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+.card:hover {
+    transform: scale(0.95);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.join-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #e0e0e0;
+}
+.join-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+.join-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.join-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 200px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+}
+.join-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* z-index: -1; */
+}
+.join-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

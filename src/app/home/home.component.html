@@ -1,0 +1,28 @@
+<app-header></app-header>
+<video class="video-background" autoplay muted loop>
+    <source src="assets/video/background-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+<div class="content">
+    <h1>We are FitNation</h1>
+    <p>We are going to lead the world</p>
+</div>
+<section class="section">
+    <h2>Fun Trainer Led Group Classes</h2>
+    <div class="cards">
+        <div class="card" *ngFor="let image of classImages">
+            <img [src]="image" alt="Class Image">
+        </div>
+    </div>
+</section>
+<section class="join-section">
+    <h2>Join FitNation Family</h2>
+    <div class="join-cards">
+        <div class="join-card" *ngFor="let join of joinOptions" (click)="navigateTo(join.link)">
+            <img [src]="join.image" [alt]="join.alt">
+            {{ join.text }}
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>

@@ -1,0 +1,22 @@
+<header class="header">
+    <a routerLink="/home" class="logo">
+        <span>Fit</span>
+        <span>Nation</span>
+    </a>
+    
+    <nav class="nav-links">
+        <!-- <a routerLink="/fitness">Fitness</a> -->
+        <a routerLink="/plans">Plans</a>
+        <a routerLink="/store">Programs</a>
+        <a routerLink="/my-plans">My Plans</a>
+    </nav>
+    <div class="profile-menu" (click)="toggleDropdown($event)">
+        <img src="assets/images/profile-icon.png" alt="Profile">
+        <div class="dropdown" *ngIf="dropdownOpen">
+            <a (click)="logout()">Logout</a>
+            <a routerLink="/my-plans">My Plans</a>
+        </div>
+    </div>
+    <!-- <div style="color: white;">Himanshu</div> -->
+    
+</header>
