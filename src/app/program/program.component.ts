@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
 
-interface Program {
+export interface Program {
+  id: number;
   name: string;
   description: string;
-  image: string;
+  imageUrl: string;
+  duration: string;
+  details: string;
+  externalUrl?: string; // Optional external URL
 }
 
 @Component({
@@ -11,81 +15,75 @@ interface Program {
   templateUrl: './program.component.html',
   styleUrls: ['./program.component.css']
 })
-export class ProgramComponent 
-{
+export class ProgramComponent {
   programs: Program[] = [
     {
+      id: 1,
       name: 'Badminton',
       description: 'Enhance your agility and reflexes with our badminton training sessions.',
-      image: 'assets/badminton.jpg'
+      imageUrl: 'assets/badminton.jpg',
+      duration: '1 Month',
+      details: 'Badminton is a racquet sport played using racquets to hit a shuttlecock across a net.',
+      externalUrl: 'https://en.wikipedia.org/wiki/Badminton'
     },
     {
-      name: 'Cardio',
-      description: 'Boost your endurance with our high-energy cardio workouts.',
-      image: 'assets/cardio.jpg'
-    },
-    {
+      id: 2,
       name: 'Weight Training',
       description: 'Build strength and muscle with our structured weight training programs.',
-      image: 'assets/weight-training.jpg'
+      imageUrl: 'assets/weight-training.jpg',
+      duration: '2 Months',
+      details: 'Weight training involves using resistance to induce muscular contraction.',
+      externalUrl: 'https://www.verywellfit.com/strength-4157137'
     },
     {
+      id: 3,
       name: 'Zumba',
       description: 'Enjoy fitness with our fun and energetic Zumba classes.',
-      image: 'assets/zumba.jpg'
+      imageUrl: 'assets/zumba.jpg',
+      duration: '1 Month',
+      details: 'Zumba is a dance fitness program that involves dance and aerobic elements.',
+      externalUrl: 'https://en.wikipedia.org/wiki/Zumba'
     },
     {
+      id: 4,
       name: 'Yoga',
       description: 'A group of physical, mental, and spiritual practices.',
-      image: 'assets/yoga.jpg'
+      imageUrl: 'assets/yoga.jpg',
+      duration: '1 Month',
+      details: 'Yoga involves breath control, meditation, and specific bodily postures.',
+      externalUrl: 'https://www.yogapedia.com/definition/4/yoga'
     },
     {
+      id: 5,
       name: 'Pilates',
       description: 'A physical fitness system focused on core strength.',
-      image: 'assets/pilates.jpg'
+      imageUrl: 'assets/pilates.jpg',
+      duration: '1 Month',
+      details: 'Pilates emphasizes balanced development of the body through core strength and flexibility.',
+      externalUrl: 'https://www.pilates.com/what-is-pilates-and-benefits/'
     },
     {
-      name: 'Kickboxing',
-      description: 'A full-body workout combining martial arts and cardio.',
-      image: 'assets/kickboxing.jpg'
-    },
-    {
+      id: 6,
       name: 'HIIT',
       description: 'High-intensity interval training for maximum calorie burn.',
-      image: 'assets/hiit.jpg'
+      imageUrl: 'assets/hiit.jpg',
+      duration: '1 Month',
+      details: 'HIIT is a cardiovascular exercise strategy alternating short periods of intense exercise.',
+      externalUrl: 'https://www.everydayhealth.com/fitness/high-intensity-interval-training/guide/'
     }
-
-  ];
-    trainers = [
-      {
-        name: 'John Doe',
-        role: 'Muscles Trainer',
-        image: 'assets/trainer-1.jpg'
-      },
-      {
-        name: 'Jane Doe',
-        role: 'Boxing Trainer',
-        image: 'assets/trainer-2.jpg'
-      },
-      {
-        name: 'Tom Anderson',
-        role: 'Fitness Trainer',
-        image: 'assets/trainer-3.jpg'
-      }
-
   ];
 
-  selectedTrainer: any;
+  selectedProgram: Program | null = null;
 
-  moreInfo(program: any) {
-    // Your existing code to handle more info
+  viewMore(program: Program) {
+    if (program.externalUrl) {
+      window.open(program.externalUrl, '_blank'); // Open in a new tab
+    } else {
+      this.selectedProgram = program; // Set the selected program for modal
+    }
   }
 
-  selectTrainer(trainer: any) {
-    this.selectedTrainer = trainer;
-  }
-
-  showMoreInfo(programName: string) {
-    alert(`More information about ${programName} coming soon!`);
+  closeModal() {
+    this.selectedProgram = null; // Clear the selected program
   }
 }
