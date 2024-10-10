@@ -1,4 +1,4 @@
-.login-container {
+/*.login-container {
     display: flex;
     height: 100vh;
   }
@@ -89,3 +89,142 @@
     border: 1px solid #ccc;
     border-radius: 4px;
   }
+    */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh; /* Full viewport height */
+      overflow: hidden; /* Prevent scrolling */
+  }
+  
+  .login-container {
+      display: flex;
+      height: 100vh;
+      background-image: url('../../assets/bgimg1.jpg'); /* Add your background image */
+      background-size: cover; /* Cover the entire screen */
+      background-position: center; /* Center the image */
+  }
+  .form-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for contrast */
+    padding: 20px; /* Padding inside the box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: rgba(50, 50, 93, 0.3) 0px 15px 35px -5px, rgba(0, 0, 0, 0.5) 0px 10px 20px -8px; /* Shadow for popping effect */
+    width: 100%; /* Full width of the parent */
+    max-width: 300px; /* Limit the width */
+    margin-top: 20px; /* Space above the form */
+}
+  .login-left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px; /* Adjust padding for consistency */
+      /*background-color: rgba(245, 245, 245, 0.8); /* Semi-transparent background for contrast */
+      border-radius: 8px; /* Match sign-up container */
+      box-shadow: rgba(50, 50, 93, 0.3) 0px 15px 35px -5px, rgba(0, 0, 0, 0.5) 0px 10px 20px -8px inset; 
+  }
+  
+  .login-left h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #000; /* Darker text color */
+      font-weight: bold;
+  }
+  
+  .login-left p {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #000; /* Darker text color for better readability */
+      font-weight: bold;
+  }
+  .login-left .sign-up-prompt {
+    font-size: 0.875rem; /* Smaller size for the sign-up prompt */
+    color: #555; /* Slightly lighter color for better contrast */
+  }
+
+  .login-left form {
+      width: 100%;
+      height: 100;
+      max-width: 300px; /* Same max-width as sign-up */
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .login-left form label {
+      margin-top: 1rem;
+      color: #555; /* Darker label color */
+  }
+  
+  .login-left form input {
+      padding: 10px; /* Increased padding for better touch target */
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+  }
+  
+  .login-left .btn {
+      padding: 10px; /* Increased padding for consistency */
+      margin-top: 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .login-left .btn-google {
+      background-color: #db4437;
+      color: white;
+  }
+  
+  .login-left .btn-apple {
+      background-color: #000000;
+      color: white;
+  }
+  
+  .login-left .btn-signin {
+      background-color: #4a90e2;
+      color: white;
+  }
+  
+  .login-left .btn:hover {
+      opacity: 0.9; /* Simple hover effect */
+  }
+  
+  .login-right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .login-info {
+      text-align: center;
+  }
+  
+  .login-info h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+  }
+  
+  .login-info p {
+      margin-bottom: 1rem;
+      color: white;
+    font-size: 20px;
+    text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+      font-weight: bold;
+      font-size: large;
+  }
+  
+  .login-info img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+  }
+  

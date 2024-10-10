@@ -16,6 +16,18 @@
       "email": "ratnesh",
       "password": "123456",
       "confirmPassword": "123456"
+    },
+    {
+      "id": "f111",
+      "email": "himanshu@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "9182",
+      "name": "gaurav",
+      "email": "2hgew87hc87",
+      "password": "asdfg",
+      "confirmPassword": "asdf"
     }
   ]
 }
