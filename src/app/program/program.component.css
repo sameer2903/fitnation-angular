@@ -1,0 +1,125 @@
+.program {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .programs-contents {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .program-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    text-align: center;
+    width: 250px; /* Adjust as needed */
+  }
+  
+  .program-image img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .program-desc {
+    padding: 20px;
+  }
+  
+  .know-more-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .know-more-btn:hover {
+    background-color: #0056b3;
+  }
+  
+
+  .program-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    justify-content: space-between; /* Distribute space between items */
+  }
+  
+  .program-card {
+    flex: 0 1 calc(25% - 20px); /* Each card takes 25% width minus margins */
+    margin: 10px; /* Space between cards */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    border: 1px solid #ccc; /* Optional styling */
+    padding: 10px; /* Optional styling */
+    text-align: center; /* Center text */
+  }
+  
+  .program-card img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+
+  .our-team {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .trainers-layout {
+    display: flex;
+  }
+  
+  .trainer-list {
+    flex: 1;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+  }
+  
+  .trainer-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .trainer-list li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .trainer-list li:hover {
+    background-color: #eaeaea;
+  }
+  
+  .trainer-description {
+    flex: 2;
+    padding: 20px;
+  }
+
+  .trainer-image {
+    width: 300px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and text */
+  }
+  
+  .trainer-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .trainer-info {
+    margin-top: 10px;
+  }
+  

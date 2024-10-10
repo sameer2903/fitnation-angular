@@ -4,12 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component'; // Adjust the path if necessary
+import { LoginComponent } from './login/login.component';
+import { ProgramComponent } from './program/program.component'; // Adjust the path if necessary
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    ProgramComponent
   ],
   imports: [
     BrowserModule,

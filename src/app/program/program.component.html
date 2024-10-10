@@ -1,0 +1,50 @@
+<section class="program" id="program">
+    <header class="section-header">
+      <h3>Our Programs</h3>
+      <h1>Explore Our Training Programs</h1>
+      <p>Join one of our specialized programs to reach your fitness goals.</p>
+    </header>
+    
+    <div class="programs-contents">
+      <div class="program-card" *ngFor="let program of programs">
+        <div class="program-image">
+          <img [src]="program.image" alt="{{ program.name }} Program">
+        </div>
+        <div class="program-desc">
+          <h2>{{ program.name }}</h2>
+          <p>{{ program.description }}</p>
+          <button class="btn know-more-btn" (click)="showMoreInfo(program.name)">Know More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+ 
+ <!-- Our Trainers Section -->
+<section class="our-team" id="our_team">
+    <header class="section-header">
+      <h3>Our Trainers</h3>
+      <h1>Meet Our Experienced Trainers</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </header>
+  
+    <div class="trainers-layout">
+      <div class="trainer-list">
+        <ul>
+          <li *ngFor="let trainer of trainers" (click)="selectTrainer(trainer)">
+            {{ trainer.name }}
+          </li>
+        </ul>
+      </div>
+      <div class="trainer-description" *ngIf="selectedTrainer">
+        <div class="trainer-image">
+          <img [src]="selectedTrainer.image" alt="{{ selectedTrainer.name }}">
+        </div>
+        <div class="trainer-info">
+          <h2>{{ selectedTrainer.name }}</h2>
+          <p>{{ selectedTrainer.role }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
