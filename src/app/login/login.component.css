@@ -131,6 +131,7 @@
       margin-bottom: 1rem;
       color: #000; /* Darker text color */
       font-weight: bold;
+      text-align: center;
   }
   
   .login-left p {

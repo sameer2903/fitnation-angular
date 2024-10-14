@@ -1,0 +1,401 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitNation - Plan</title>
+    <link rel="stylesheet" href="plan.component.css">
+    <style>
+        /* Include your existing CSS styles here */
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #001f3f;
+            color: white;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .passes-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            height: auto; /* Changed to auto for dynamic height */
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+        }
+
+        .aluminium-card {
+            background-color: #b0b0b0; 
+        }
+
+        .diamond-card {
+            background-color: #b9f2ff;
+        }
+
+        .platinum-card {
+            background-color: #e5e4e2;
+            width: 820px;
+            height: auto; /* Changed to auto for dynamic height */
+            margin: 0 auto;
+        }
+
+        .card:hover {
+            transform: scale(0.95);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px; /* Fixed height for uniformity */
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-content h3 {
+            font-size: 1.8em;
+            margin: 10px 0;
+        }
+
+        .card-content p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 1em;
+            font-weight: bold;
+            color: white;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #555;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-links">
+            <a routerLink="/fitness">Fitness</a>
+            <a routerLink="/sports">Sports</a>
+            <a routerLink="/store">Store</a>
+            <a routerLink="/bmi">BMI</a>
+        </nav>
+        <a routerLink="/" class="logo">
+            <span>Fit</span>
+            <span>Nation</span>
+        </a>
+    </header>
+
+    <section class="section" id="passes">
+        <h2>Membership Passes</h2>
+        <div class="cards passes-cards">
+            <div class="card aluminium-card">
+                <div class="card-content">
+                    <h3>Aluminium Pass</h3>
+                    <p>Our basic pass that gives you access to all gym facilities and group classes.</p>
+                    <button class="btn" (click)="openDialog()">Subscribe</button>
+                </div>
+            </div>
+            <div class="card diamond-card">
+                <div class="card-content">
+                    <h3>Diamond Pass</h3>
+                    <p>Includes all Aluminium Pass benefits plus access to premium equipment and personal training sessions.</p>
+                    <button class="btn" (click)="openDialog()">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="card platinum-card">
+            <div class="card-content">
+                <h3>Platinum Pass</h3>
+                <p>All Diamond Pass benefits plus unlimited access to all facilities, VIP lounge, and exclusive events.</p>
+                <button class="btn" (click)="openDialog()">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="trainers">
+        <h2>Individual Trainer Packages</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="../../assets/personal-trainer.jpg" alt="Personal Trainer">
+                <div class="card-content">
+                    <h3>Personal Trainer</h3>
+                    <p>Get one-on-one training sessions tailored to your fitness goals.</p>
+                    <button class="btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../../assets/yoga-trainer.jpg" alt="Yoga Trainer">
+                <div class="card-content">
+                    <h3>Yoga Trainer</h3>
+                    <p>Personalized yoga sessions to improve flexibility and mindfulness.</p>
+                    <button class="btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../../assets/nutritionist.jpg" alt="Nutritionist">
+                <div class="card-content">
+                    <h3>Nutritionist</h3>
+                    <p>Get a customized diet plan to complement your fitness routine.</p>
+                    <button class="btn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="about">
+            <div class="logo">FitNation</div>
+            <p>Yoga is a practice for body, mind, and spirit.</p>
+        </div>
+        <div class="links">
+            <a href="fitness.html">Fitness</a>
+            <a href="sports.html">Sports</a>
+            <a href="store.html">Store</a>
+            <a href="BMI.html">BMI</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+        <div class="right">
+            <div class="logo">FitNation</div>
+            <img src="../../assets/playstore.png" alt="Download from Play Store">
+            <img src="../../assets/appstore.png" alt="Download from App Store">
+        </div>
+    </footer>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitNation - Plan</title>
+    <link rel="stylesheet" href="plan.component.css">
+    <style>
+        /* Include your existing CSS styles here */
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #001f3f;
+            color: white;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .passes-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            height: auto; /* Changed to auto for dynamic height */
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+        }
+
+        .aluminium-card {
+            background-color: #b0b0b0; 
+        }
+
+        .diamond-card {
+            background-color: #b9f2ff;
+        }
+
+        .platinum-card {
+            background-color: #e5e4e2;
+            width: 820px;
+            height: auto; /* Changed to auto for dynamic height */
+            margin: 0 auto;
+        }
+
+        .card:hover {
+            transform: scale(0.95);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px; /* Fixed height for uniformity */
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-content h3 {
+            font-size: 1.8em;
+            margin: 10px 0;
+        }
+
+        .card-content p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 1em;
+            font-weight: bold;
+            color: white;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #555;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-links">
+            <a routerLink="/fitness">Fitness</a>
+            <a routerLink="/sports">Sports</a>
+            <a routerLink="/store">Store</a>
+            <a routerLink="/bmi">BMI</a>
+        </nav>
+        <a routerLink="/" class="logo">
+            <span>Fit</span>
+            <span>Nation</span>
+        </a>
+    </header>
+
+    <section class="section" id="passes">
+        <h2>Membership Passes</h2>
+        <div class="cards passes-cards">
+            <div class="card aluminium-card">
+                <div class="card-content">
+                    <h3>Aluminium Pass</h3>
+                    <p>Our basic pass that gives you access to all gym facilities and group classes.</p>
+                    <button class="btn" (click)="openDialog(0)">
+                        {{ plans[0].subscribed ? 'View Plan' : 'Subscribe' }}
+                    </button>
+                </div>
+            </div>
+            <div class="card diamond-card">
+                <div class="card-content">
+                    <h3>Diamond Pass</h3>
+                    <p>Includes all Aluminium Pass benefits plus access to premium equipment and personal training sessions.</p>
+                    <button class="btn" (click)="openDialog(1)">
+                        {{ plans[1].subscribed ? 'View Plan' : 'Subscribe' }}
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card platinum-card">
+            <div class="card-content">
+                <h3>Platinum Pass</h3>
+                <p>All Diamond Pass benefits plus unlimited access to all facilities, VIP lounge, and exclusive events.</p>
+                <button class="btn" (click)="openDialog(2)">
+                    {{ plans[2].subscribed ? 'View Plan' : 'Subscribe' }}
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="trainers">
+        <h2>Individual Trainer Packages</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="../../assets/personal-trainer.jpg" alt="Personal Trainer">
+                <div class="card-content">
+                    <h3>Personal Trainer</h3>
+                    <p>Get one-on-one training sessions tailored to your fitness goals.</p>
+                    <button class="btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../../assets/yoga-trainer.jpg" alt="Yoga Trainer">
+                <div class="card-content">
+                    <h3>Yoga Trainer</h3>
+                    <p>Personalized yoga sessions to improve flexibility and mindfulness.</p>
+                    <button class="btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../../assets/nutritionist.jpg" alt="Nutritionist">
+                <div class="card-content">
+                    <h3>Nutritionist</h3>
+                    <p>Get a customized diet plan to complement your fitness routine.</p>
+                    <button class="btn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="about">
+            <div class="logo">FitNation</div>
+            <p>Yoga is a practice for body, mind, and spirit.</p>
+        </div>
+        <div class="links">
+            <a href="fitness.html">Fitness</a>
+            <a href="sports.html">Sports</a>
+            <a href="store.html">Store</a>
+            <a href="BMI.html">BMI</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+        <div class="right">
+            <div class="logo">FitNation</div>
+            <img src="../../assets/playstore.png" alt="Download from Play Store">
+            <img src="../../assets/appstore.png" alt="Download from App Store">
+        </div>
+    </footer>
+</body>
+</html>

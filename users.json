@@ -28,6 +28,13 @@
       "email": "2hgew87hc87",
       "password": "asdfg",
       "confirmPassword": "asdf"
+    },
+    {
+      "id": "5b5f",
+      "name": "shrestha Baruah",
+      "email": "shresthabaruah011@gmail.com",
+      "password": "Shrestha98",
+      "confirmPassword": "Shrestha98@"
     }
   ]
 }
