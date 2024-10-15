@@ -1,6 +1,10 @@
 <div class="login-container">
   <div class="login-left">
     <div class="form-container">
+      <a  class="logo">
+        <span>Fit</span>
+        <span>Nation</span>
+    </a>
       <h2>Login! 🏋🏻‍♀️</h2>
       <p>How do I get started?</p>
       <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm)">
@@ -12,12 +16,12 @@
           [(ngModel)]="user1.email"
           placeholder="myfitness@gmail.com"
           required
-          #email="ngModel"
+          #email="ngModel" ngModel [email]="true"
         >
-        <div *ngIf="email.invalid && email.touched" class="error-message">
+        <div *ngIf="loginForm.submitted && email.invalid" class="error-message">
           Email is required.
         </div>
-
+        <div *ngIf="email.errors?.['email']">Invalid email format.</div>
         <label for="password">Password</label>
         <input
           type="password"
@@ -28,21 +32,18 @@
           required
           #password="ngModel"
         >
-        <div *ngIf="password.invalid && password.touched" class="error-message">
+        <div *ngIf="loginForm.submitted && password.invalid" class="error-message">
           Password is required.
         </div>
 
-        <button type="submit" class="btn btn-signin" [disabled]="loginForm.invalid">Sign In</button>
+        <button type="submit" class="btn btn-signin">Sign In</button>
       </form>
       <p class="sign-up-prompt">Don't have an account? <a routerLink="/sign-up">Sign Up Now</a></p>
-      <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p> <!-- Display error message -->
+      <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}
+        
+      </p> 
+      <!-- Display error message -->
     </div>
   </div>
-  <div class="login-right">
-    <div class="login-info">
-      <h3>Why should I login?</h3>
-      <p>By logging in, you can access your personal dashboard, where you can manage your account, view your profile, and much more.</p>
-      <img src="../../assets/login_image.png" alt="login image">
-    </div>
-  </div>
+  <div class="login-right"></div>
 </div>

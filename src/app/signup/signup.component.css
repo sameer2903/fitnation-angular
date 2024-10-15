@@ -1,85 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&display=swap'); 
 
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     height: 100vh; /* Full viewport height */
-    
-    overflow: hidden;
-}
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  .logo {
+    font-family: 'Matemasie', sans-serif; 
+    font-size: 2em;
+    font-weight: bold;
+    color:white;
+    margin-right: 80px;
+    text-align: center;
+    line-height: 1.2;
+  }
+  .logo span {
+    display: block;
+  }
 
-.background-image {
-    background-image: url('../../assets/bgimg1.jpg'); /* Replace with your image URL */
-    background-size: cover; /* Cover the entire screen */
-    background-position: center; /* Center the image */
-    height: 100vh; /* Fill the body height */
-    width: 100vw;
-    display: flex; /* Center content */
-    align-items: center; /* Vertically center */
-    justify-content: center; /* Horizontally center */
-}
-
-.sign-up-container {
+  .signup-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .form-container {
+    padding: 20%;
+    background: transparent; /* Light background for contrast */
+    padding: 20px; /* Padding inside the box */
+    border-radius: 8px; /* Rounded corners */
+    width: 100%; /* Full width of the parent */
+    max-width: 300px; /* Limit the width */
+    margin-top: 20px; /* Space above the form */
+  }
+  
+  .signup-left {
+    flex: 0.5;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: first baseline;
     justify-content: center;
-    max-width: 400px;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for contrast */
-    padding: 20px;
-    box-shadow: rgba(50, 50, 93, 0.3) 0px 15px 35px -5px, rgba(0, 0, 0, 0.5) 0px 10px 20px -8px inset; 
-    border-radius: 8px;
+    padding: 20px; /* Adjust padding for consistency */
+    border-radius: 8px; /* Match login container */
+    background-color: rgb(66, 73, 86);
+  }
+  
+  .signup-left h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white; /* Darker text color */
+    font-weight: bold;
+  }
+  
+  .signup-left p {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white; /* Darker text color for better readability */
+    font-weight: bold;
+  }
+  
+  .signup-left .login-prompt {
+    font-size: 0.875rem; /* Smaller size for the login prompt */
+    color: whitesmoke; /* Slightly lighter color for better contrast */
+  }
+  
+  .signup-left form {
     width: 100%;
-}
-
-.sign-up-container h2 {
-    margin-bottom: 20px;
-    color: #333; /* Darker text color */
-}
-
-.sign-up-container form {
+    max-width: 300px; /* Same max-width as login */
     display: flex;
     flex-direction: column;
-    width: 100%;
-}
-
-.sign-up-container label {
-    margin-top: 10px;
-    color: #555; /* Slightly darker label color */
-}
-
-.sign-up-container input {
-    padding: 10px;
-    margin-top: 5px;
+    background: transparent;
+  }
+  
+  .signup-left form label {
+    margin-top: 1rem;
+    color: whitesmoke; /* Darker label color */
+  }
+  
+  .signup-left form input {
+    padding: 10px; /* Increased padding for better touch target */
+    margin-top: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-}
-
-.sign-up-container .btn-signup {
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #4a90e2;
-    color: white;
+  }
+  
+  .signup-left .btn {
+    padding: 10px; /* Increased padding for consistency */
+    margin-top: 1rem;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s; /* Smooth transition for hover effect */
-}
-
-.sign-up-container .btn-signup:hover {
-    background-color: #357ab8; /* Darker shade on hover */
-}
-
-.sign-up-container p {
-    margin-top: 15px;
-    color: #666; /* Slightly darker color for text */
-}
-
-.sign-up-container a {
-    color: #4a90e2; /* Link color */
-    text-decoration: underline; /* Underline for better visibility */
-}
-
-.sign-up-container a:hover {
-    text-decoration: none; /* Remove underline on hover */
-}
+  }
+  
+  .signup-left .btn-signup {
+    background-color: #4a90e2;
+    color: white;
+  }
+  
+  .signup-left .btn:hover {
+    opacity: 0.9; /* Simple hover effect */
+  }
+  
+  .signup-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../assets/login-image.jpg");
+    object-fit: cover;
+    background-size: cover; /* Cover the entire screen */
+    background-position: center; /* Center the image */
+  }
+  
+  .login-prompt a {
+    text-decoration: none;
+    color: #000000;
+  }
+  

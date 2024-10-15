@@ -21,7 +21,9 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   
-    
+  isLoggedIn(): boolean {
+    return !!localStorage.getItem('user'); // Check if user data exists in localStorage
+  }
        
       
     

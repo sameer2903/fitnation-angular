@@ -9,17 +9,18 @@ import { MyplanComponent } from './myplan/myplan.component';
 import { AluminiumPassComponent } from './aluminium-pass/aluminium-pass.component';
 import { DiamondPassComponent } from './diamond-pass/diamond-pass.component';
 import { PlatinumPassComponent } from './platinum-pass/platinum-pass.component';
+import { AuthGuard } from './auth.guard'; // Import AuthGuard
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'sign-up', component: SignupComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'plans', component: PlansComponent },
-  { path: 'program', component: ProgramComponent },
-  { path: 'my-plans', component: MyplanComponent },
-  { path: 'aluminium-pass', component: AluminiumPassComponent },
-  { path: 'diamond-pass', component: DiamondPassComponent },
-  { path: 'platinum-pass', component: PlatinumPassComponent},
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'plans', component: PlansComponent, canActivate: [AuthGuard] },
+  { path: 'program', component: ProgramComponent, canActivate: [AuthGuard] },
+  { path: 'my-plans', component: MyplanComponent, canActivate: [AuthGuard] },
+  { path: 'aluminium-pass', component: AluminiumPassComponent, canActivate: [AuthGuard] },
+  { path: 'diamond-pass', component: DiamondPassComponent, canActivate: [AuthGuard] },
+  { path: 'platinum-pass', component: PlatinumPassComponent, canActivate: [AuthGuard] },
   { path: '', redirectTo: '/login', pathMatch: 'full' } // Default route
 ];
 

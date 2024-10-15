@@ -1,21 +1,45 @@
-<div class="background-image">
-  <div class="sign-up-container">
-    <h2>Sign Up</h2>
-    <form #signUpForm="ngForm" (ngSubmit)="onSignUp(signUpForm)">
-      <label for="name">Name</label>
-      <input type="text" id="name" placeholder="write your name" name="name" [(ngModel)]="user.name" required />
+<div class="signup-container">
+  <div class="signup-left">
+    <div class="form-container">
+      <a  class="logo">
+        <span>Fit</span>
+        <span>Nation</span>
+    </a>
+      <h2>Sign Up</h2>
+      <form #signUpForm="ngForm" (ngSubmit)="onSignUp(signUpForm)">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="write your name" name="name" [(ngModel)]="user.name" required #name="ngModel" />
+        <div *ngIf="signUpForm.submitted && name.invalid">
+          <small>Name is required.</small>
+        </div>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" placeholder="write your email" name="email" [(ngModel)]="user.email" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="write your email" name="email" [(ngModel)]="user.email" required #email="ngModel" ngModel [email]="true" />
+        <div *ngIf="signUpForm.submitted && email.invalid">
+          <small>Email is required.</small>
+          <div *ngIf="email.errors?.['email']">Invalid email format.</div>
 
-      <label for="password">Password</label>
-      <input type="password" id="password" placeholder="write password" name="password" [(ngModel)]="user.password" required />
+        </div>
 
-      <label for="confirmPassword">Confirm Password</label>
-      <input type="password" id="confirmPassword" placeholder="confirm password" name="confirmPassword" [(ngModel)]="user.confirmPassword" required />
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="write password" name="password" [(ngModel)]="user.password" required #password="ngModel" />
+        <div *ngIf="signUpForm.submitted && password.invalid">
+          <small>Password is required.</small>
+        </div>
 
-      <button type="submit" class="btn btn-signup">Sign Up</button>
-    </form>
-    <p>Already have an account? <a routerLink="/login">Login Here</a></p>
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" placeholder="confirm password" name="confirmPassword" [(ngModel)]="user.confirmPassword" required #confirmPassword="ngModel" />
+        <div *ngIf="signUpForm.submitted && confirmPassword.invalid">
+          <small>Confirm Password is required.</small>
+        </div>
+        <div *ngIf="signUpForm.submitted && user.password !== user.confirmPassword">
+          <small>Passwords do not match.</small>
+        </div>
+
+        <button type="submit" class="btn btn-signup">Sign Up</button>
+      </form>
+      <p class="login-prompt">Already have an account? <a routerLink="/login">Login Here</a></p>
+    </div>
   </div>
+  <div class="signup-right"></div>
 </div>

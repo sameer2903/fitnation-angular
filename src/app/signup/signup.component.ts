@@ -19,7 +19,7 @@ export class SignupComponent {
   constructor(private authService: AuthService, private router: Router) { }
 
   onSignUp(form: NgForm) {
-    if (form.valid) {
+    if (form.valid && this.user.password === this.user.confirmPassword) {
       this.authService.signup(this.user).subscribe(
         (response: any) => {
           console.log('User registered successfully', response);
@@ -31,6 +31,9 @@ export class SignupComponent {
           // Handle error (e.g., show error message)
         }
       );
+    } else {
+      // Mark all fields as touched to trigger validation messages
+      form.form.markAllAsTouched();
     }
   }
 }

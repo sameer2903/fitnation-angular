@@ -36,6 +36,9 @@ export class LoginComponent {
           }, 3000); // Clear error message after 3 seconds
         }
       );
+    } else {
+      // Mark all fields as touched to trigger validation messages
+      form.form.markAllAsTouched();
     }
   }
 }
