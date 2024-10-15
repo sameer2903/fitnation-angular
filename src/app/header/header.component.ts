@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -8,8 +9,19 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   dropdownOpen = false;
+  username="";
+  constructor(private router: Router ) {}
 
-  constructor(private router: Router) {}
+  ngOnInit(): void {
+    const userJson = localStorage.getItem('user');
+    if (userJson) {
+      const user = JSON.parse(userJson);
+       this.username = user.name;
+      
+    } else {
+      console.error('User not found in localStorage');
+    }
+  }
 
   toggleDropdown(event: Event) {
     event.stopPropagation();
@@ -23,6 +35,7 @@ export class HeaderComponent {
 
   logout() {
     // Perform logout logic here
-    this.router.navigate(['/sign-in']);
+    localStorage.removeItem('user');
+    this.router.navigate(['/login']);
   }
 }

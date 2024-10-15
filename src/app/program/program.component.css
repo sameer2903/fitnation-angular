@@ -1,0 +1,160 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #2c3e50;
+  }
+  
+ /* :host {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  } 
+   */
+ /* app-header {
+    flex-shrink: 0;
+    
+  }  */
+  app-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  
+  
+  .program {
+
+    margin-top: 0px;
+    padding: 100px 20px 80px; /* Adjust the top and bottom padding based on the height of your header and footer */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:gray;
+    text-align: center;
+  }
+  .section-header{
+    
+  }
+  
+  /* app-footer {
+    flex-shrink: 0;
+  } */
+
+/* .program {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+} */
+
+.intro-text {
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+
+.programs-contents {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between items */
+    max-width: 1200px; /* Optional max width */
+    margin: 0 auto; /* Center the grid */
+}
+
+.program-card {
+    position: relative;
+    background-color: black;
+    border-radius: 8px;
+    box-shadow: 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s;
+    color: white;
+}
+
+.program-card:hover {
+    transform: scale(1.05);
+}
+
+.program-image img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.program-desc {
+    padding: 10px 0;
+}
+
+.view-more-btn {
+    background-color: #007bff; /* Primary color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 15px; /* Padding for size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    font-size: 1rem; /* Font size */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .view-more-btn:hover {
+    background-color: #005663; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  .view-more-btn:active {
+    background-color: #00414d; /* Even darker shade on click */
+    transform: scale(0.95); /* Slightly shrink on click */
+  }
+  
+
+.hover-content {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px; /* Adjust width as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    opacity: 1; /* Always visible when selected */
+    transition: opacity 0.3s ease;
+}
+
+.program-card:hover .hover-content {
+    opacity: 1; /* Fade in on hover */
+}
+
+/* Modal overlay */
+.modal-overlay {
+    position: fixed; /* Fixed positioning */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: flex;
+    justify-content: center; /* Center modal */
+    align-items: center; /* Center modal */
+    z-index: 1000; /* High z-index to appear above other content */
+  }
+  
+  /* Modal content */
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* Adjust width as needed */
+    max-width: 600px; /* Maximum width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Close button */
+  .close-button {
+    cursor: pointer;
+    float: right;
+    font-size: 1.5em;
+  }
+  
+  

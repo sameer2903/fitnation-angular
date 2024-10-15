@@ -84,6 +84,7 @@ body, html {
     gap: 20px;
 }
 .join-card {
+    cursor: pointer;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -106,7 +107,7 @@ body, html {
     position: absolute;
     top: 0;
     left: 0;
-    /* z-index: -1; */
+    z-index: -1;
 }
 .join-card:hover {
     transform: scale(1.05);

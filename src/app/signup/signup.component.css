@@ -1,29 +1,51 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Full viewport height */
+    
+    overflow: hidden;
+}
+
+.background-image {
+    background-image: url('../../assets/bgimg1.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Cover the entire screen */
+    background-position: center; /* Center the image */
+    height: 100vh; /* Fill the body height */
+    width: 100vw;
+    display: flex; /* Center content */
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+}
+
 .sign-up-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 400px ;
-    background-color: #f5f5f5;
-    margin-top: 8%;
-    margin-left: 36%;
-    padding: 10px;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for contrast */
+    padding: 20px;
     box-shadow: rgba(50, 50, 93, 0.3) 0px 15px 35px -5px, rgba(0, 0, 0, 0.5) 0px 10px 20px -8px inset; 
-    border-radius: 8px; /* Optional: Add border-radius for a smoother look */
+    border-radius: 8px;
+    width: 100%;
 }
 
 .sign-up-container h2 {
     margin-bottom: 20px;
+    color: #333; /* Darker text color */
 }
 
 .sign-up-container form {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 100%;
 }
 
 .sign-up-container label {
     margin-top: 10px;
+    color: #555; /* Slightly darker label color */
 }
 
 .sign-up-container input {
@@ -41,8 +63,23 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.sign-up-container .btn-signup:hover {
+    background-color: #357ab8; /* Darker shade on hover */
 }
 
 .sign-up-container p {
     margin-top: 15px;
+    color: #666; /* Slightly darker color for text */
+}
+
+.sign-up-container a {
+    color: #4a90e2; /* Link color */
+    text-decoration: underline; /* Underline for better visibility */
+}
+
+.sign-up-container a:hover {
+    text-decoration: none; /* Remove underline on hover */
 }

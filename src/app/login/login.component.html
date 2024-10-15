@@ -1,29 +1,42 @@
 <div class="login-container">
   <div class="login-left">
-    <h2>Login! 🏋🏻‍♀️</h2>
-    <p>How do I get started?</p>
-    <form #loginForm="ngForm" (ngSubmit)="onLogin()">
-      <label for="email">Email</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        [(ngModel)]="user1.email"
-        placeholder="myfitness@gmail.com"
-        required
-      >
-      <label for="password">Password</label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        [(ngModel)]="user1.password"
-        placeholder="******"
-        required
-      >
-      <button type="submit" class="btn btn-signin">Sign In</button>
-    </form>
-    <p>Don't have an account? <a routerLink="/sign-up">Sign Up Now</a></p>
+    <div class="form-container">
+      <h2>Login! 🏋🏻‍♀️</h2>
+      <p>How do I get started?</p>
+      <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm)">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="user1.email"
+          placeholder="myfitness@gmail.com"
+          required
+          #email="ngModel"
+        >
+        <div *ngIf="email.invalid && email.touched" class="error-message">
+          Email is required.
+        </div>
+
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="user1.password"
+          placeholder="******"
+          required
+          #password="ngModel"
+        >
+        <div *ngIf="password.invalid && password.touched" class="error-message">
+          Password is required.
+        </div>
+
+        <button type="submit" class="btn btn-signin" [disabled]="loginForm.invalid">Sign In</button>
+      </form>
+      <p class="sign-up-prompt">Don't have an account? <a routerLink="/sign-up">Sign Up Now</a></p>
+      <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p> <!-- Display error message -->
+    </div>
   </div>
   <div class="login-right">
     <div class="login-info">

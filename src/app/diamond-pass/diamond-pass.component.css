@@ -1,0 +1,71 @@
+html, body {
+    height: 100%; /* Ensure the body takes full height */
+    margin: 0; /* Remove default margin */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+app-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+.pass-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align to the start for scrolling */
+    min-height: 100vh; /* Minimum height to fill the viewport */
+    padding: 20px;
+    background: linear-gradient(to bottom, #001f3f, #005f7f); /* Gradient background for aesthetics */
+    color: white; /* Text color for better visibility on dark background */
+}
+
+.exercise-section {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0; /* Spacing between sections */
+    padding: 20px;
+    width: 90%; /* Responsive width */
+    max-width: 800px; /* Max width for larger screens */
+    transition: transform 0.3s, box-shadow 0.3s; /* Added shadow transition */
+}
+
+.exercise-section:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.exercise-section h3 {
+    margin: 10px 0;
+    font-size: 2.5em; /* Increased font size for exercise names */
+    color: #001f3f; /* Dark blue color for headings */
+}
+
+.exercise-section iframe {
+    width: 100%;
+    height: 450px; /* Increased height for videos */
+    border-radius: 10px; /* Rounded corners for the video */
+}
+
+.exercise-section p {
+    margin: 10px 0;
+    font-size: 1.5em; /* Increased font size for step descriptions */
+    color: #333; /* Dark text for contrast */
+}
+
+.exercise-section ul {
+    text-align: left; /* Align list items to the left */
+    padding-left: 20px; /* Indent list */
+    font-size: 1.3em; /* Slightly increased font size for list items */
+    color: #001f3f; /* Dark blue color for list items */
+}
+
+.main-heading {
+    font-size: 3.5em; /* Large font size for the main heading */
+    color: #ffffff; /* White text color for contrast */
+    text-align: center; /* Center the heading */
+    margin-bottom: 40px; /* Space below the heading */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    font-family: 'Arial', sans-serif; /* Font family for the heading */
+}

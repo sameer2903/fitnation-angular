@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { AuthService } from '../auth.service'; // Adjust the path if necessary
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -9,19 +9,33 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  user1= {
+  user1 = {
     email: '',
-  password: '',
+    password: ''
   };
+  errorMessage: string = '';
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) { }
 
-  onLogin() {
-    console.log('User data:', this.user1)
-    this.authService.login(this.user1).subscribe(response => {
-      console.log('User logged in successfully!', response);
-    }, error => {
-      console.error('error logging in user', error);
-    });
+  onLogin(form: NgForm) {
+    if (form.valid) {
+      this.authService.login(this.user1).subscribe(
+        (response: any) => {
+          console.log('User logged in successfully', response);
+          localStorage.setItem('user', JSON.stringify(response)); // Store user object
+          this.router.navigate(['/home']); // Navigate to home page on successful login
+        },
+        (error: any) => {
+          console.error('Error logging in user', error);
+          this.errorMessage = 'Invalid email or password!'; // Display error message
+          this.user1.email = '';
+          this.user1.password = '';
+          form.resetForm();
+          setTimeout(() => {
+            this.errorMessage = '';
+          }, 3000); // Clear error message after 3 seconds
+        }
+      );
+    }
   }
 }

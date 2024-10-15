@@ -1,0 +1,92 @@
+/* myplan.component.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #2c3e50;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+app-header {
+  flex-shrink: 0;
+  
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+app-footer {
+  flex-shrink: 0;
+}
+
+h2 {
+  color: #2c3e50;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background: #ecf0f1;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+}
+
+.card-header h3 {
+  margin: 0;
+  color: #34495e;
+}
+
+.card-body p {
+  color: #7f8c8d;
+}
+
+.card-footer {
+  text-align: right;
+}
+
+button {
+  background-color: #3498db;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.no-plans-message {
+  text-align: center; /* Center the text */
+  padding: 20px; /* Add padding around the text */
+  background-color: #f8d7da; /* Light red background */
+  color: #721c24; /* Dark red text color */
+  border: 1px solid #f5c6cb; /* Border to match the background */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1.2em; /* Increase the font size */
+  margin: 20px auto; /* Center the element horizontally with margin */
+  max-width: 400px; /* Limit the width */
+}
+

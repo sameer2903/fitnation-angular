@@ -17,8 +17,8 @@ export class HomeComponent {
   ];
 
   joinOptions = [
-    { image: 'assets/images/career.jpg', alt: 'Career at FitNation', text: 'Career at FitNation', link: '/career' },
-    { image: 'assets/images/franchise.jpg', alt: 'FitNation Franchise', text: 'FitNation Franchise', link: '/franchise' }
+    { image: 'assets/images/career.jpg', alt: 'Join Our Programs', text: 'Join Our Programs', link: '/program' },
+    { image: 'assets/images/franchise.jpg', alt: 'Subscibe Our Plans', text: 'Subscibe Our Plans', link: '/plans' }
   ];
 
   constructor(private router: Router) {}

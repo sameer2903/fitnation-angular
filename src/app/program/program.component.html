@@ -1,0 +1,30 @@
+<app-header></app-header>
+<section class="program" id="program">
+    
+    <div class="programs-contents">
+      <div class="program-card" *ngFor="let program of programs">
+        <div class="program-image">
+          <img [src]="program.imageUrl" alt="{{ program.name }} Program">
+        </div>
+        <div class="program-desc">
+          <h2>{{ program.name }}</h2>
+          <p>{{ program.description }}</p>
+          <button (click)="viewMore(program)" class="view-more-btn">View More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Modal -->
+  <div *ngIf="selectedProgram" class="modal-overlay" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <span class="close-button" (click)="closeModal()">&times;</span>
+      <h2>{{ selectedProgram.name }}</h2>
+      <p><strong>Description:</strong> {{ selectedProgram.description }}</p>
+      <p><strong>Duration:</strong> {{ selectedProgram.duration }}</p>
+      <p><strong>Details:</strong> {{ selectedProgram.details }}</p>
+    </div>
+  </div>
+
+<app-footer></app-footer>
+  

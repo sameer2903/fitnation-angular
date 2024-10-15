@@ -7,12 +7,13 @@
     <nav class="nav-links">
         <!-- <a routerLink="/fitness">Fitness</a> -->
         <a routerLink="/plans">Plans</a>
-        <a routerLink="/store">Programs</a>
+        <a routerLink="/program">Programs</a>
         <a routerLink="/my-plans">My Plans</a>
     </nav>
     <div class="profile-menu" (click)="toggleDropdown($event)">
         <img src="assets/images/profile-icon.png" alt="Profile">
         <div class="dropdown" *ngIf="dropdownOpen">
+            <a href="">{{username}}</a>
             <a (click)="logout()">Logout</a>
             <a routerLink="/my-plans">My Plans</a>
         </div>

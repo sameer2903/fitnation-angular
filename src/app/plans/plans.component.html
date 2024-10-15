@@ -1,0 +1,23 @@
+<app-header></app-header>
+<section class="section" id="passes">
+    <div *ngIf="successMessage" class="success-message">
+        {{ successMessage }}
+    </div>
+    <h2>Membership Passes</h2>
+    <div class="cards passes-cards">
+        <div *ngFor="let plan of plans" class="card" [ngClass]="{'aluminium-card': plan.name === 'Aluminium', 'diamond-card': plan.name === 'Diamond', 'platinum-card': plan.name === 'Platinum'}">
+            <div class="card-content">
+                <h3>{{ plan.name }}</h3>
+                <p>{{ plan.description }}</p>
+                
+                <button class="btn" 
+                        [ngClass]="{'subscribed': isSubscribed(plan.id)}" 
+                        (click)="isSubscribed(plan.id) ? viewPlan(plan) : subscribe(plan.id, plan.name)">
+                    {{ isSubscribed(plan.id) ? 'View Plan' : 'Subscribe for free' }}
+                </button>
+            </div>
+        </div>
+    </div>
+    
+</section>
+<app-footer></app-footer>
